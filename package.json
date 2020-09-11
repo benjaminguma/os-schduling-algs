@@ -1,0 +1,14 @@
+{
+  "name": "schduling-algs",
+  "version": "1.0.0",
+  "description": "simulator",
+  "main": "index.js",
+  "scripts": {
+    "phoenix": "parcel src/index.html"
+  },
+  "author": "Guma",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
