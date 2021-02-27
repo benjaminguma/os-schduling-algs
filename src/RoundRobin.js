@@ -78,7 +78,7 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
       return {
         story,
         end: i,
-        title: "round robin algorithm",
+        title: "roun` 132d robin algorithm",
       };
     }
     if (IOFOT === "no process") {
