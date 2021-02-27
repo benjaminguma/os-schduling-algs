@@ -16,7 +16,7 @@ function getProcessAt(arrai, time, T) {
 }
 
 function getProcessAt2(arrai, time, T2, T) {
-  //bring idexes of processes that arrived at time T=arrival time
+  //bring idexes of processes that arrived within time range T1 and T2
   let indexes = arrai.reduce((arr, p, i) => {
     return p.at >= T2 && p.at <= T && p.at !== undefined ? arr.concat(i) : arr;
   }, []);

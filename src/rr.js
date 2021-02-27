@@ -50,16 +50,16 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
       //after q0 runs once we have to know if we should reschdule it
 
       choice = queue[0];
-      // console.log({ queue });
+      console.log({ queue });
 
       queue2.push(choice);
       queue.shift();
-      // console.log({ choiceBefore: choice });
+      console.log({ choiceBefore: choice });
       //console.log(queue2);
 
       //if it has some bt let it be pushed to za queue
 
-      // console.log({ choiceReturned: choice });
+      console.log({ choiceReturned: choice });
       return choice;
     }
     //if there is non end the program
@@ -115,4 +115,36 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
   }
 }
 
-module.exports = { RoundRobin };
+const data = {
+  queue: [],
+  wasteTime: 0,
+  tq: 3,
+  story: [],
+  tracker: {},
+  //   read: [
+  //     { at: 45, bt: 20 }, //*0
+  //     { at: 4, bt: 2 }, //*01
+  //     { at: 86, bt: 27 }, //*02
+  //     { at: 63, bt: 2 }, //*03
+  //     { at: 64, bt: 57 }, //*04
+  //     { at: 18, bt: 2 }, //*05
+  //   ],
+  read: [
+    { at: 45, bt: 20 }, //*0
+    { at: 4, bt: 15 }, //*01
+    { at: 86, bt: 27 }, //*02
+    { at: 63, bt: 2 }, //*03
+    { at: 64, bt: 57 }, //*04
+    { at: 18, bt: 2 }, //*05
+  ],
+  //   read: [
+  //     { at: 5, bt: 5 },
+  //     { at: 4, bt: 6 },
+  //     { at: 3, bt: 7 },
+  //     { at: 1, bt: 9 },
+  //     { at: 2, bt: 2 },
+  //     { at: 6, bt: 3 },
+  //   ],
+};
+// module.exports = { RoundRobin };
+console.log(RoundRobin(data));
