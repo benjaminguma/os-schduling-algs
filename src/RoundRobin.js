@@ -16,7 +16,6 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
     if (read.some((p) => p.at !== undefined)) {
       // checks if there is a process in the schduler
       let arrived = getProcessAt2(read, "at", time2, time);
-      console.log({ queueBefore: queue });
       if (arrived === 0 && !queue.length && !hasLastValid(queue2, read)) {
         return "no process";
       }
@@ -38,12 +37,11 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
             queue = [...arrived, queue2[queue2.length - 1]];
           } else queue = [...arrived];
         } else {
-          //? in this case the queue contains values and there are new arrivals
+          // ! in this case the queue contains values and there are new arrivals
           if (hasLastValid(queue2, read)) {
             queue = [...queue, ...arrived, queue2[queue2.length - 1]];
           } else queue = [...queue, ...arrived];
         }
-        console.log({ queue });
       }
       if (!modifiedQueue && hasLastValid(queue2, read))
         queue = [...queue, queue2[queue2.length - 1]];

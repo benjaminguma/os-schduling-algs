@@ -16,7 +16,6 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
     if (read.some((p) => p.at !== undefined)) {
       // checks if there is a process in the schduler
       let arrived = getProcessAt2(read, "at", time2, time);
-      console.log({ queueBefore: queue });
       if (arrived === 0 && !queue.length && !hasLastValid(queue2, read)) {
         return "no process";
       }
@@ -43,23 +42,19 @@ function RoundRobin({ read, queue, wasteTime, story, tq }) {
             queue = [...queue, ...arrived, queue2[queue2.length - 1]];
           } else queue = [...queue, ...arrived];
         }
-        console.log({ queue });
       }
       if (!modifiedQueue && hasLastValid(queue2, read))
         queue = [...queue, queue2[queue2.length - 1]];
       //after q0 runs once we have to know if we should reschdule it
 
       choice = queue[0];
-      console.log({ queue });
 
       queue2.push(choice);
       queue.shift();
-      console.log({ choiceBefore: choice });
       //console.log(queue2);
 
       //if it has some bt let it be pushed to za queue
 
-      console.log({ choiceReturned: choice });
       return choice;
     }
     //if there is non end the program
@@ -121,22 +116,22 @@ const data = {
   tq: 3,
   story: [],
   tracker: {},
-  //   read: [
-  //     { at: 45, bt: 20 }, //*0
-  //     { at: 4, bt: 2 }, //*01
-  //     { at: 86, bt: 27 }, //*02
-  //     { at: 63, bt: 2 }, //*03
-  //     { at: 64, bt: 57 }, //*04
-  //     { at: 18, bt: 2 }, //*05
-  //   ],
   read: [
     { at: 45, bt: 20 }, //*0
-    { at: 4, bt: 15 }, //*01
+    { at: 4, bt: 2 }, //*01
     { at: 86, bt: 27 }, //*02
     { at: 63, bt: 2 }, //*03
     { at: 64, bt: 57 }, //*04
     { at: 18, bt: 2 }, //*05
   ],
+  // read: [
+  //   { at: 45, bt: 20 }, //*0
+  //   { at: 4, bt: 15 }, //*01
+  //   { at: 86, bt: 27 }, //*02
+  //   { at: 63, bt: 2 }, //*03
+  //   { at: 64, bt: 57 }, //*04
+  //   { at: 18, bt: 2 }, //*05
+  // ],
   //   read: [
   //     { at: 5, bt: 5 },
   //     { at: 4, bt: 6 },
