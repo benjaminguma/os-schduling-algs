@@ -4,7 +4,8 @@
   "description": "simulator",
   "main": "index.js",
   "scripts": {
-    "phoenix": "parcel src/index.html"
+    "phoenix": "parcel src/index.html",
+    "build":"parcel build src/index.html"
   },
   "author": "Guma",
   "license": "ISC",
