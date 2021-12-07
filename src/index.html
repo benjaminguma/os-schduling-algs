@@ -1,232 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>c.p.u schduler</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keyword"
-      content="cpu schduling algoriths,cpu simulator ,FCFS,RR,sJF,premptive algorithms,first come first serve"
-    />
-    <meta name="discription" content=" operating system " />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cinzel|Uncial+Antiqua&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Noto+Sans|Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+	<head>
+		<title>c.p.u schduler</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="keyword"
+			content="cpu schduling algoriths,cpu simulator ,FCFS,RR,sJF,premptive algorithms,first come first serve"
+		/>
+		<meta name="discription" content=" operating system " />
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Uncial+Antiqua&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Noto+Sans|Varela+Round&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header class="header clips">
-      <nav class="nav br-3">
-        <div class="nav__branding p-2 u-center">
-          <h1 class="heading--3">operating system</h1>
-        </div>
-        <div class="nav__marq">
-          <h4 class="heading--3 u-center">
-            schduling algorithms
-            <span>&lt;&lt;simulator&gt;&gt; </span>
-          </h4>
-        </div>
-      </nav>
-    </header>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header class="header clips">
+			<nav class="nav br-3">
+				<div class="nav__branding p-2 u-center">
+					<h1 class="heading--3">operating system</h1>
+				</div>
+				<div class="nav__marq">
+					<h4 class="heading--3 u-center">
+						schduling algorithms
+						<span>&lt;&lt;simulator&gt;&gt; </span>
+					</h4>
+				</div>
+			</nav>
+		</header>
 
-    <main>
-      <section class="showcase mt-2">
-        <div class="fill">
-          <div class="row">
-            <h1 class="heading--1 mb-2">
-              analyse <br />
-              the <span>cpu</span> schduling <br />mechanism
-            </h1>
-            <a
-              href="#"
-              onclick="window.scrollTo(0,257)"
-              class="btn1 btn--clipped heading"
-            >
-              explore</a
-            >
-          </div>
-        </div>
-      </section>
+		<main>
+			<section class="showcase mt-2">
+				<div class="fill">
+					<div class="row">
+						<h1 class="heading--1 mb-2">
+							analyse <br />
+							the <span>cpu</span> schduling <br />mechanism
+						</h1>
+						<a href="#" onclick="window.scrollTo(0,257)" class="btn1 btn--clipped heading">
+							explore</a
+						>
+					</div>
+				</div>
+			</section>
 
-      <div class="u-center grad mt-2 clips br-3 p--1">
-        <h2 class="heading--2 br-3">specify requirements</h2>
-      </div>
-      <section class="tooglebar clips mt-2" id="ro">
-        <div class="row--flex mb-3">
-          <div class="col-1-4">
-            <div class="tooglebar--con u-center">
-              <h4 class="heading">R.R</h4>
-              <input
-                type="checkbox"
-                class="toog-1 btn--clipped"
-                value="robin"
-              />
-            </div>
-          </div>
+			<div class="u-center grad mt-2 clips br-3 p--1">
+				<h2 class="heading--2 br-3">specify requirements</h2>
+			</div>
+			<section class="tooglebar clips mt-2" id="ro">
+				<div class="row--flex mb-3">
+					<div class="col-1-4">
+						<div class="tooglebar--con u-center">
+							<h4 class="heading">R.R</h4>
+							<input type="checkbox" class="toog-1 btn--clipped" value="robin" />
+						</div>
+					</div>
 
-          <div class="col-1-4">
-            <div class="tooglebar--con u-center">
-              <h4 class="heading">F.C.F.S</h4>
-              <input type="checkbox" class="toog-1 btn--clipped" value="fcfs" />
-            </div>
-          </div>
+					<div class="col-1-4">
+						<div class="tooglebar--con u-center">
+							<h4 class="heading">F.C.F.S</h4>
+							<input type="checkbox" class="toog-1 btn--clipped" value="fcfs" />
+						</div>
+					</div>
 
-          <div class="col-1-4">
-            <div class="tooglebar--con u-center">
-              <h4 class="heading">S.J.F</h4>
-              <input type="checkbox" class="toog-1 btn--clipped" value="sjf" />
-            </div>
-          </div>
+					<div class="col-1-4">
+						<div class="tooglebar--con u-center">
+							<h4 class="heading">S.J.F</h4>
+							<input type="checkbox" class="toog-1 btn--clipped" value="sjf" />
+						</div>
+					</div>
 
-          <div class="col-1-4">
-            <div class="tooglebar--con u-center">
-              <h4 class="heading">S.R.T.F</h4>
-              <input type="checkbox" class="toog-1 btn--clipped" value="srtf" />
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="col-1-4">
+						<div class="tooglebar--con u-center">
+							<h4 class="heading">S.R.T.F</h4>
+							<input type="checkbox" class="toog-1 btn--clipped" value="srtf" />
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section class="specs mt-2 p-2">
-        <div class="row">
-          <form id="form1">
-            <div class="col-1-2">
-              <div class="form--group u-center">
-                <input type="number" class="i" max="15" min="1" />
+			<section class="specs mt-2 p-2">
+				<div class="row">
+					<form id="form1">
+						<div class="col-1-2">
+							<div class="form--group u-center">
+								<input type="number" class="i" max="15" min="1" />
 
-                <label id="l">
-                  specify number of processes
-                </label>
-                <p class="t-red u-left p-1">
-                  max is
-                  <strong>
-                    15
-                  </strong>
-                  and min is
-                  <strong>
-                    1
-                  </strong>
-                </p>
-              </div>
-            </div>
+								<label id="l"> specify number of processes </label>
+								<p class="t-red u-left p-1">
+									max is
+									<strong> 15 </strong>
+									and min is
+									<strong> 1 </strong>
+								</p>
+							</div>
+						</div>
 
-            <div class="col-1-2" id="tq-toog">
-              <div class="form--group u-center">
-                <input type="number" class="i" max="100" min="1" />
-                <label> time quantum </label>
-                <p class="t-red u-left p-1">
-                  max is
-                  <strong>
-                    100
-                  </strong>
-                  and min is
-                  <strong>
-                    1
-                  </strong>
-                </p>
-              </div>
-            </div>
+						<div class="col-1-2" id="tq-toog">
+							<div class="form--group u-center">
+								<input type="number" class="i" max="100" min="1" />
+								<label> time quantum </label>
+								<p class="t-red u-left p-1">
+									max is
+									<strong> 100 </strong>
+									and min is
+									<strong> 1 </strong>
+								</p>
+							</div>
+						</div>
 
-            <div class="col-1-2">
-              <div class="form--group u-center">
-                <input
-                  type="submit"
-                  value="generate"
-                  id="summit"
-                  class="btn--clipped btn1 heading"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+						<div class="col-1-2">
+							<div class="form--group u-center">
+								<input
+									type="submit"
+									value="generate"
+									id="summit"
+									class="btn--clipped btn1 heading"
+								/>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
 
-      <section class="input__queue" id="input__pack">
-        <div class="u-center">
-          <button class="btn--clipped1 btn2 mb-3" id="random">
-            insert random
-          </button>
-        </div>
-        <form id="form2">
-          <div class="row p-1" id="inputz"></div>
+			<section class="input__queue" id="input__pack">
+				<div class="u-center">
+					<button class="btn--clipped1 btn2 mb-3" id="random">insert random</button>
+				</div>
+				<form id="form2">
+					<div class="row p-1" id="inputz"></div>
 
-          <div class="form--group u-center">
-            <input
-              type="submit"
-              value="Execute"
-              id="exec"
-              class="btn--clipped btn1 heading"
-            />
-          </div>
-        </form>
-      </section>
+					<div class="form--group u-center">
+						<input type="submit" value="Execute" id="exec" class="btn--clipped btn1 heading" />
+					</div>
+				</form>
+			</section>
 
-      <section class="caution u-center" id="caution"></section>
+			<section class="caution u-center" id="caution"></section>
 
-      <section id="test" class="algo__pack"></section>
-      <section id="test1" class="algo__pack"></section>
-      <section id="test2" class="algo__pack"></section>
-      <section id="test3" class="algo__pack"></section>
+			<section id="test" class="algo__pack"></section>
+			<section id="test1" class="algo__pack"></section>
+			<section id="test2" class="algo__pack"></section>
+			<section id="test3" class="algo__pack"></section>
 
-      <div class="gantt">
-        <div class="process__con" id="con-1">
-          <!-- process are embedded here-->
-        </div>
-      </div>
-    </main>
-    <footer class="footer-main">
-      <div class="row">
-        <div class="col-1-4" style="width: 50%; float: left;">
-          <div class="footer-des">
-            the c.p.u does a lot of work when it executes programs whilst using
-            different algorithms to schdule them which could be pre-emptive or
-            non-premptive .this program simulates this activity the pros and
-            cons of these algorithms
-          </div>
-        </div>
-        <div class="col-1-4" style="width: 50%; float: right;">
-          <div class="footer-talk">
-            <p>
-              follow us and be the first to know when something new comes up!
-              thanks in advance :)
-            </p>
-            <div class="footer-socials">
-              <a
-                href="mailto:benjaminguma.bg@gmail.com"
-                target="_blank"
-                class="footer-link fa fa-google"
-              ></a>
-              <a
-                href="https://twitter.com/benjaminguma?s=09"
-                target="_blank"
-                class="footer-link fa fa-twitter"
-              ></a>
-              <a
-                href="https://wa.me/2348141908042?text=nice%20work%20!!"
-                target="_blank"
-                class="footer-link fa fa-whatsapp"
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="./footer.svg" alt="footer-bg" class="footer-bg" />
-      <div class="footer-bottom">
-        <div class="row u-center">
-          <p>&copy; 2020 <span class="auth">GUMAA's</span> lab :)</p>
-        </div>
-      </div>
-    </footer>
-    <script src="index.js"></script>
-  </body>
+			<div class="gantt">
+				<div class="process__con" id="con-1">
+					<!-- process are embedded here-->
+				</div>
+			</div>
+		</main>
+		<footer class="footer-main">
+			<div class="row">
+				<div class="col-1-4" style="width: 50%; float: left">
+					<div class="footer-des">
+						the c.p.u does a lot of work when it executes programs whilst using different algorithms
+						to schdule them which could be pre-emptive or non-premptive .this program simulates this
+						activity the pros and cons of these algorithms
+					</div>
+				</div>
+				<div class="col-1-4" style="width: 50%; float: right">
+					<div class="footer-talk">
+						<p>
+							follow us and be the first to know when something new comes up! thanks in advance :)
+						</p>
+						<div class="footer-socials">
+							<a
+								href="mailto:benjaminguma.bg@gmail.com"
+								target="_blank"
+								class="footer-link fa fa-google"
+							></a>
+							<a
+								href="https://twitter.com/benjaminguma?s=09"
+								target="_blank"
+								class="footer-link fa fa-twitter"
+							></a>
+							<a
+								href="https://wa.me/2348141908042?text=nice%20work%20!!"
+								target="_blank"
+								class="footer-link fa fa-whatsapp"
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="./footer.svg" alt="footer-bg" class="footer-bg" />
+			<div class="footer-bottom">
+				<div class="row u-center">
+					<p>&copy; 2021 <span class="auth">Group 3</span> </p>
+					<!-- lab :) -->
+				</div>
+			</div>
+		</footer>
+		<script src="index.js" type="module"></script>
+	</body>
 </html>

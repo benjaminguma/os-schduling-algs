@@ -9,6 +9,17 @@
   "author": "Guma",
   "license": "ISC",
   "dependencies": {
+    "parcel": "^2.0.1",
     "parcel-bundler": "^1.12.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminguma/os-schduling-algs.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/benjaminguma/os-schduling-algs/issues"
+  },
+  "homepage": "https://github.com/benjaminguma/os-schduling-algs#readme"
 }
