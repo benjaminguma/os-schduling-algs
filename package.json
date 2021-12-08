@@ -2,10 +2,10 @@
   "name": "schduling-algs",
   "version": "1.0.0",
   "description": "simulator",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "phoenix": "parcel src/index.html",
-    "build":"parcel build src/index.html"
+    "build":"parcel build src/index.js"
   },
   "author": "Guma",
   "license": "ISC",
